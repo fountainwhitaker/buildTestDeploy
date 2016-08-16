@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>buildTestDeploy</title>
+		<script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular.min.js"></script>
+		<script type="text/javascript" src="app/app.controller.js"></script>
+		<link rel='shortcut icon' href='http://pacific-waters-12255.herokuapp.com/favicon.ico' type='image/x-icon'/ >
+
+		<!-- Bootstrap.css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	</head>
+	<body>
+		<div class="outerElement">
+			<div class="container" ng-controller="appController">
+				<div class="jumbotron">
+					<h1>CircleCI Exam</h1>
+					<div class="row">
+						<div class="col-lg-4 col-lg-offset-4">
+							<div class="input-group">
+								<input ng-model="toDoItem" class="form-control" type="text" placeholder="Write task here.">
+									<button class="btn btn-primary center-block btn-space" type="button" ng-click="submit()">Submit</button>
+								<div ng-repeat="toDo in toDoList">{{ toDo }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+
+	<script type="text/javascript">
+		angular.element(document).ready(function() {
+   			angular.bootstrap(document, ['app']);
+		});
+	</script>
+</html>
